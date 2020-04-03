@@ -442,8 +442,8 @@
 	DOM.loading = document.querySelector('.loading');
 	DOM.switchCtrls = document.querySelector('.switch');
 	DOM.switchModeCtrls = {
-		'design' : DOM.switchCtrls.firstElementChild,
-		'code' : DOM.switchCtrls.lastElementChild
+		'code' : DOM.switchCtrls.firstElementChild,
+		'design' : DOM.switchCtrls.lastElementChild
 	};
 	DOM.pieces = document.querySelector('.pieces');
 	DOM.glitchElems = document.querySelectorAll('[data-glitch]');
@@ -746,9 +746,9 @@
 			},
 			duration: 20,
 			complete: function() {
-				DOM.menu['code'].wrapper.style.display = 'none';
-				DOM.menu['design'].wrapper.style.display = 'block';
-				showDesign(DOM.menu['design'].items);
+				DOM.menu['design'].wrapper.style.display = 'none';
+				DOM.menu['code'].wrapper.style.display = 'block';
+				showDesign(DOM.menu['code'].items);
 			}
 		});
 	}
