@@ -8,7 +8,6 @@
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
-
 ;(function(window) {
 
 	// Helper vars and functions.
@@ -390,7 +389,6 @@
 	/**
 	 * Glitch iteration fn.
 	 */
-	
 	GlitchFx.prototype._glitchState = function(callback) {
 		const self = this;
 
@@ -455,11 +453,11 @@
 	};
 	DOM.menuCtrl = document.querySelector('.btn--menu');
 	DOM.menu = {
-		'design' : {
+		'code' : {
 			'wrapper': document.querySelector('.menu'),
 			'items': document.querySelector('.menu').firstElementChild.querySelectorAll('.menu__inner a')
 		},
-		'code' : {
+		'design' : {
 			'wrapper': document.querySelector('.menu--code'),
 			'items': document.querySelectorAll('.menu--code > .menu__inner a')
 		}
@@ -746,9 +744,9 @@
 			},
 			duration: 20,
 			complete: function() {
-				DOM.menu['design'].wrapper.style.display = 'none';
-				DOM.menu['code'].wrapper.style.display = 'block';
-				showDesign(DOM.menu['code'].items);
+				DOM.menu['code'].wrapper.style.display = 'none';
+				DOM.menu['design'].wrapper.style.display = 'block';
+				showDesign(DOM.menu['design'].items);
 			}
 		});
 	}
