@@ -440,8 +440,8 @@
 	DOM.loading = document.querySelector('.loading');
 	DOM.switchCtrls = document.querySelector('.switch');
 	DOM.switchModeCtrls = {
-		'code' : DOM.switchCtrls.firstElementChild,
-		'design' : DOM.switchCtrls.lastElementChild
+		'design' : DOM.switchCtrls.firstElementChild,
+		'code' : DOM.switchCtrls.lastElementChild
 	};
 	DOM.pieces = document.querySelector('.pieces');
 	DOM.glitchElems = document.querySelectorAll('[data-glitch]');
@@ -453,11 +453,11 @@
 	};
 	DOM.menuCtrl = document.querySelector('.btn--menu');
 	DOM.menu = {
-		'code' : {
+		'design' : {
 			'wrapper': document.querySelector('.menu'),
 			'items': document.querySelector('.menu').firstElementChild.querySelectorAll('.menu__inner a')
 		},
-		'design' : {
+		'code' : {
 			'wrapper': document.querySelector('.menu--code'),
 			'items': document.querySelectorAll('.menu--code > .menu__inner a')
 		}
