@@ -21,7 +21,7 @@ main {
 
 a {
 	text-decoration: none;
-	color: #6dcc9e;
+	color: #41edbdfa;
 	outline: none;
 	cursor: pointer;
 }
@@ -270,7 +270,7 @@ a:focus {
 .switch__item--current {
 	pointer-events: none;
 	color: #232323;
-	background-color: #6dcc9e;
+	background-color: rgb(42 240 176 / 54%);
 }
 
 .mode--code .switch__item--current {
