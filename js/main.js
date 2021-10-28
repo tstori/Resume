@@ -8,7 +8,7 @@
  * Copyright 2017, Codrops
  * http://www.codrops.com
  */
-;(function(window) {
+ ;(function(window) {
 
 	// Helper vars and functions.
 	function extend( a, b ) {
@@ -440,8 +440,8 @@
 	DOM.loading = document.querySelector('.loading');
 	DOM.switchCtrls = document.querySelector('.switch');
 	DOM.switchModeCtrls = {
-		'design' : DOM.switchCtrls.lastElementChild,
-		'code' : DOM.switchCtrls.firstElementChild
+		'design' : DOM.switchCtrls.firstElementChild,
+		'code' : DOM.switchCtrls.lastElementChild
 	};
 	DOM.pieces = document.querySelector('.pieces');
 	DOM.glitchElems = document.querySelectorAll('[data-glitch]');
@@ -454,18 +454,17 @@
 	DOM.menuCtrl = document.querySelector('.btn--menu');
 	DOM.menu = {
 		'design' : {
-			'wrapper': document.querySelector('.menu--code'),
-			'items': document.querySelectorAll('.menu--code > .menu__inner a')
-			
-		},
-		'code' : {
 			'wrapper': document.querySelector('.menu'),
 			'items': document.querySelector('.menu').firstElementChild.querySelectorAll('.menu__inner a')
+		},
+		'code' : {
+			'wrapper': document.querySelector('.menu--code'),
+			'items': document.querySelectorAll('.menu--code > .menu__inner a')
 		}
 	};
 	DOM.overlay = document.querySelector('.overlay');
 	// The current mode.
-	let mode = 'code', disablePageFx, isAnimating;
+	let mode = 'design', disablePageFx, isAnimating;
 
 	function init() {
 		imagesLoaded(DOM.body, { background: true }, function() {
@@ -517,14 +516,14 @@
 			  },
 			  contactMouseEnterEvFn = function(ev) {
 				if( isAnimating ) return false;
-				if( mode === 'code' ) {
+				if( mode === 'design' ) {
 					pauseFxFn();
 				}
-				pm.fxCustom(mode === 'code' ? 'left' : 'right');
+				pm.fxCustom(mode === 'design' ? 'left' : 'right');
 			  },
 			  contactMouseLeaveEvFn = function(ev) {
 			  	if( isAnimating || !pm.fxCustomTriggered ) return false;
-				pm.fxCustomReset(mode === 'code' ? 'left' : 'right', function() {
+				pm.fxCustomReset(mode === 'design' ? 'left' : 'right', function() {
 					if( !disablePageFx ) {
 						playFxFn();
 					}
@@ -554,7 +553,7 @@
 		isAnimating = true;
 		
 		// mode: design||code.
-		mode = ev.target === DOM.switchModeCtrls.code ? 'code' : 'code';
+		mode = ev.target === DOM.switchModeCtrls.code ? 'code' : 'design';
 
 		switchOverlay();
 
@@ -566,7 +565,7 @@
 		}
 		
 		// Change current class on the designer/coder links.
-		DOM.switchModeCtrls[mode === 'code' ? 'code' : 'code'].classList.remove('switch__item--current');
+		DOM.switchModeCtrls[mode === 'code' ? 'design' : 'code'].classList.remove('switch__item--current');
 		DOM.switchModeCtrls[mode].classList.add('switch__item--current');
 		
 		// Switch the page content.
