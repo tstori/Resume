@@ -19,9 +19,9 @@ body {
 	--color-text: #fff;
 	--color-link: #5f5f5f;
 	--color-link-hover: #ba3bff;
-	--color-enter: #fff;; 
+	--color-enter: #C29269; 
 	--color-title: #fff;
-	--color-subtitle: #ccd8e4;
+	--color-subtitle: #C29269;
 	--color-menu-item: #000;
 	--color-menu-item-hover: #164A4C;
 	--color-menu-item-hover-alt: #8544da;
@@ -211,7 +211,7 @@ main {
 }
 
 .page .content--fixed {
-	background-color: #585656;
+	background-color: #232323;
 }
 
 .content__inner {
