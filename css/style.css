@@ -7,8 +7,7 @@
 body {
 	font-family: 'Nunito', sans-serif;
 	min-height: 100vh;
-	color: #57585c;
-	color: var(--color-text);
+	color: #585656;
 	background-color: #fff;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
